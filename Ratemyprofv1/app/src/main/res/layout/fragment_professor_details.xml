@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_white">
+
+    <TextView
+        android:id="@+id/tvProfessorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Professor Name" />
+
+    <TextView
+        android:id="@+id/tvDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Department" />
+
+    <TextView
+        android:id="@+id/tvAverageRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avg: 0.0/5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tvTeachingQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teaching Quality: -" />
+        <TextView
+            android:id="@+id/tvClarity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clarity: -" />
+        <TextView
+            android:id="@+id/tvHelpfulness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Helpfulness: -" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWriteReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Write Review"
+        android:layout_marginTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
+
+

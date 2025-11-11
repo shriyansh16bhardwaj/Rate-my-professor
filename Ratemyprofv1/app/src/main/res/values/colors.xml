@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Blue Palette -->
+    <color name="primary_blue">#0B57D0</color>
+    <color name="primary_blue_dark">#0849AE</color>
+    <color name="primary_blue_light">#3C79E6</color>
+
+    <!-- Secondary/Accent (lighter blue) -->
+    <color name="secondary_blue">#5E97F6</color>
+
+    <!-- Surface/Background -->
+    <color name="surface_white">#FFFFFFFF</color>
+    <color name="background_white">#FFFFFFFF</color>
+    <color name="surface_variant">#F2F5FB</color>
+
+    <!-- On Colors -->
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_surface">#FF1A1C1E</color>
+    <color name="on_surface_variant">#FF42474E</color>
+    <color name="on_background">#FF1A1C1E</color>
+
+    <!-- Error -->
+    <color name="error">#B00020</color>
+    <color name="on_error">#FFFFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

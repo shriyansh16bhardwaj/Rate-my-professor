@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ratemyprofv1.ui.auth.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.ratemyprofv1.ui.auth.RegisterFragment"
+        android:label="Register">
+        <action
+            android:id="@+id/action_register_to_otp"
+            app:destination="@id/otpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.example.ratemyprofv1.ui.auth.OtpFragment"
+        android:label="Verify OTP">
+        <action
+            android:id="@+id/action_otp_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ratemyprofv1.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_professorDetails"
+            app:destination="@id/professorDetailsFragment" />
+        <action
+            android:id="@+id/action_home_to_myReviews"
+            app:destination="@id/myReviewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/professorDetailsFragment"
+        android:name="com.example.ratemyprofv1.ui.professor.ProfessorDetailsFragment"
+        android:label="Professor Details">
+        <action
+            android:id="@+id/action_professorDetails_to_writeReview"
+            app:destination="@id/writeReviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/writeReviewFragment"
+        android:name="com.example.ratemyprofv1.ui.professor.WriteReviewFragment"
+        android:label="Write Review" />
+
+    <fragment
+        android:id="@+id/myReviewsFragment"
+        android:name="com.example.ratemyprofv1.ui.myreviews.MyReviewsFragment"
+        android:label="My Reviews" />
+</navigation>
+
+
