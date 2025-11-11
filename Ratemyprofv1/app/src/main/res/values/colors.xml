@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary Blue Palette -->
-    <color name="primary_blue">#0B57D0</color>
-    <color name="primary_blue_dark">#0849AE</color>
-    <color name="primary_blue_light">#3C79E6</color>
+	<color name="primary_blue">#66CCFF</color>
+	<color name="primary_blue_dark">#33A6E6</color>
+	<color name="primary_blue_light">#B3E6FF</color>
 
     <!-- Secondary/Accent (lighter blue) -->
-    <color name="secondary_blue">#5E97F6</color>
+	<color name="secondary_blue">#99DDFF</color>
 
     <!-- Surface/Background -->
     <color name="surface_white">#FFFFFFFF</color>

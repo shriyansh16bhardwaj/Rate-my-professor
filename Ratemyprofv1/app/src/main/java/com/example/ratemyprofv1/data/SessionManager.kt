@@ -13,13 +13,22 @@ class SessionManager(context: Context) {
 
     fun getToken(): String? = prefs.getString(KEY_TOKEN, null)
 
+	fun isLoggedIn(): Boolean = !getToken().isNullOrEmpty()
+
+	fun setGuest(isGuest: Boolean) {
+		prefs.edit().putBoolean(KEY_GUEST, isGuest).apply()
+	}
+
+	fun isGuest(): Boolean = prefs.getBoolean(KEY_GUEST, false)
+
     fun clear() {
-        prefs.edit().clear().apply()
+		prefs.edit().clear().apply()
     }
 
     companion object {
         private const val PREFS_NAME = "session_prefs"
         private const val KEY_TOKEN = "auth_token"
+		private const val KEY_GUEST = "guest_mode"
     }
 }
 

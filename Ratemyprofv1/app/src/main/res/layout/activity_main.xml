@@ -13,14 +13,17 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar">
+			android:layout_height="wrap_content"
+			android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="@string/app_name" />
+				app:title="@string/app_name"
+				app:titleCentered="true"
+				app:contentInsetStartWithNavigation="0dp"
+				app:contentInsetStart="0dp" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <fragment
@@ -39,7 +42,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/drawer_menu" />
+		app:headerLayout="@layout/nav_header_main"
+		app:menu="@menu/drawer_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.ratemyprofv1.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.example.ratemyprofv1.data.SessionManager
+import androidx.core.view.GravityCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.loginFragment,
                 R.id.homeFragment,
                 R.id.myReviewsFragment
             ),
@@ -40,11 +40,14 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+		updateDrawerLock()
+
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             if (menuItem.itemId == R.id.action_logout) {
                 sessionManager.clear()
                 navController.navigate(R.id.loginFragment)
                 binding.drawerLayout.closeDrawers()
+				updateDrawerLock()
                 true
             } else {
                 val handled = NavigationUI.onNavDestinationSelected(menuItem, navController)
@@ -53,6 +56,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+	private fun updateDrawerLock() {
+		val allowDrawer = sessionManager.isLoggedIn() && !sessionManager.isGuest()
+		val mode = if (allowDrawer) DrawerLayout.LOCK_MODE_UNLOCKED else DrawerLayout.LOCK_MODE_LOCKED_CLOSED
+		binding.drawerLayout.setDrawerLockMode(mode, GravityCompat.START)
+	}
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
